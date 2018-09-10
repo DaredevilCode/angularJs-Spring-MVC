@@ -1,12 +1,50 @@
 <!DOCTYPE html>
-<html ng-app>
+<html ng-app="loja">
 	<head>
 		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 		<title>AngularJS Spring MVC</title>
+		<link rel="stylesheet" href="resources/css/bootstrap.min.css" />
+		<link rel="stylesheet" href="resources/css/bootstrap-grid.min.css" />
+		<script type="text/javascript" src="resources/js/bootstrap.min.js"></script>
 		<script type="text/javascript" src="resources/js/angularjs.min.js"></script>
+		<script type="text/javascript" src="resources/js/controllers/mainController.js"></script>
 	</head>
 	
-	<body>
-
+	<body ng-controller="MainController as user" id="corpo">
+		<div class="container">
+			<br>
+			<div class="row">
+				<div class="col-6">
+					<input type="text" class="form-control" ng-model="user.meuNome"></input>
+				</div>
+			</div>
+			<br>
+			<div class="row">
+				<div class="col-6">
+					<input type="text" class="form-control" ng-model="user.meuSobreNome"></input>
+				</div>
+			</div>
+			
+			<div class="jumbotrom">
+				<hr>
+				
+				<h1>{{user.meuNome}}</h1>
+				<h1>Mr: {{ user.meuSobreNome }}</h1>
+				
+				<br>
+				<a href="#" ng-click="addContador();"> Add</a>
+				
+				<h1>Contador {{ contador }}</h1>
+				
+				<hr>
+			</div>
+			<div class="jumbotrom">
+				<h1>Loop</h1>
+				<ul>
+					<li ng-repeat="nome in pessoas">{{ nome }}</li>
+				</ul>
+			</div>				
+		</div>
 	</body>
 </html>
