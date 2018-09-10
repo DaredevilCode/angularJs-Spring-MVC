@@ -1,0 +1,11 @@
+<html>
+	<h2>Frutas Disponíveis ({{frutas.length}}) </h2>
+	
+	<ul>
+		<li ng-repeat="fruta in frutas">
+			<a href="#/edit/{{fruta}}">{{fruta}}</a>
+		</li>
+	</ul>
+	
+	<a href="#/new" class="btn btn-secondary btn-lg"> Nova </a>
+</html>
