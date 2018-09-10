@@ -44,4 +44,10 @@ app.controller('newController', ['$scope', '$routeParams', '$rootScope', '$route
 			$location.path('/');
 		};
 	}
-])
+]);
+
+app.directive("pageTitleDirective", function(){
+	return {
+		template: "Feito em Um Construtor de Diretriz"
+	}
+});
