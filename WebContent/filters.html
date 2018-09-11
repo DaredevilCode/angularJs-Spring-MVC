@@ -1,0 +1,88 @@
+<html ng-app="loja">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<title>AngularJS Spring MVC</title>
+		<link rel="stylesheet" href="resources/css/bootstrap.min.css" />
+		<link rel="stylesheet" href="resources/css/bootstrap-grid.min.css" />
+		
+		
+		<script type="text/javascript" src="resources/js/plugins/angular.min.js"></script>
+		<script type="text/javascript" src="resources/js/plugins/angular-route.min.js"></script>
+		<script type="text/javascript" src="resources/js/plugins/ui-bootstrap-tpls-3.0.4.min.js"></script>
+		<script type="text/javascript" src="resources/js/controllers/mainController.js"></script>
+	</head>
+	<body>
+		<br />
+		<pre>Filters Example</pre>
+		<hr>
+		<div class="jumbotron">
+			<div ng-controller="personCtrl">
+				<h3>Uppercase e Lowercase</h3>
+				<p>O nome é {{ firstName | uppercase }}</p>
+				<p>O nome é {{ lastName | lowercase }}</p>	
+			</div>
+		</div>
+		<hr>
+		<div class="jumbotron">
+			<div ng-controller="namesCtrl">
+				<h3>Loop em Objetos</h3>
+				<ul>
+					<li ng-repeat="x in names | orderBy: 'name'">
+						{{ x.name + ', ' + x.country }}
+					</li>
+				</ul>
+			</div>
+		</div>
+		<hr>
+		<div class="jumbotron">
+			<div ng-controller="costCtrl">
+				<h3>Preço</h3>
+				<div>{{price | currency}}</div>
+			</div>
+		</div>
+		<hr>
+		<div class="jumbotron">
+			<div ng-controller="namesCtrl">
+				<h3>Loop em Objetos Com Filter</h3>
+				<ul>
+					<li ng-repeat="x in names | filter: 'a' ">
+						{{ x.name }}
+					</li>
+				</ul>
+			</div>
+		</div>
+		<hr>
+		<div class="jumbotron">
+			<div ng-controller="monthsCtrl">
+				<h3>Filter com Input</h3>
+				<p>
+					<input type="text" ng-model="teste" class="form-control"/>
+				</p>
+				<code>
+					<ul>
+						<li ng-repeat="x in names | filter:teste">
+							{{ x.name }}
+						</li>
+					</ul>
+				</code>
+			</div>
+		</div>
+		<hr>
+		<div class="jumbotron">
+			<div ng-controller="animaisCtrl">
+				<h3>Tabela com Ordenação pela Coluna</h3>
+				<table border="1" width="100%" class="table table-condensed">
+				  <tr>
+				    <th ng-click="orderByMe('name')">Name</th>
+				    <th ng-click="orderByMe('type')">Type</th>
+				  </tr>
+				  <tr ng-repeat="x in animais | orderBy:myOrderBy">
+				    <td>{{x.name}}</td>
+				    <td>{{x.type}}</td>
+				  </tr>
+				</table>
+			</div>
+		</div>
+	</body>
+</html>

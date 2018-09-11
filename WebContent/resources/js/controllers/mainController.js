@@ -6,6 +6,8 @@ app.config(function($routeProvider) {
 		when("/", { controller: "listController", templateUrl: "list.html" }).
 		when("/edit/:name", { controller: "editController", templateUrl: "form.html"}).
 		when("/new", { controller: "newController", templateUrl: "form.html"}).
+		when("/mail-validation", { templateUrl: "directive-validation.html" }).
+		when("/filters", { templateUrl: "filters.html" }).
 		otherwise({ redirectTo: "/" })
 });
 
@@ -48,6 +50,56 @@ app.controller('newController', ['$scope', '$routeParams', '$rootScope', '$route
 
 app.directive("pageTitleDirective", function(){
 	return {
-		template: "Feito em Um Construtor de Diretriz"
+		template: "Exemplos AngularJS"
+	}
+});
+
+app.controller('personCtrl', function($scope) {
+	$scope.firstName ="Jhon";
+	$scope.lastName  ="Jhon";
+});
+
+app.controller('namesCtrl', function($scope) {
+	$scope.names = [
+		{name: 'Jack', country: "Norway"},
+		{name: 'Chan', country: "Sortway"},
+		{name: 'Marty', country: "England"},
+		{name: 'Tony', country: "French"},
+	];
+});
+
+app.controller('costCtrl', function($scope) {
+	$scope.price = 2500;
+});
+
+app.controller('monthsCtrl', function($scope) {
+	$scope.names = [
+		{name: 'January'  },
+		{name: 'February'  },
+		{name: 'March' },
+		{name: 'April'  },
+		{name: 'May'  },
+		{name: 'Jun'  },
+		{name: 'July'  },
+		{name: 'August'  },
+		{name: 'September'  },
+		{name: 'October'  },
+		{name: 'November'  },
+		{name: 'December'  },
+	];
+});
+
+app.controller('animaisCtrl', function($scope) {
+	$scope.animais = [
+		{name: 'Leao', type: "Carnivoro"},
+		{name: 'Morcego', type: "Mamífero"},
+		{name: 'Urso', type: "Carnivoro"},
+		{name: 'Lobo', type: "Carnivoro"},
+		{name: 'Baleia', type: "Mamífero"},
+		{name: 'Ricos', type: "Tudo"},
+	];
+	
+	$scope.orderByMe = function(x){
+		$scope.myOrderBy = x;
 	}
 });
