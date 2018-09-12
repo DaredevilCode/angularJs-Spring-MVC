@@ -8,6 +8,7 @@ app.config(function($routeProvider) {
 		when("/new", { controller: "newController", templateUrl: "form.html"}).
 		when("/mail-validation", { templateUrl: "directive-validation.html" }).
 		when("/filters", { templateUrl: "filters.html" }).
+		when("/services", { templateUrl: "services.html" }).
 		otherwise({ redirectTo: "/" })
 });
 
@@ -102,4 +103,22 @@ app.controller('animaisCtrl', function($scope) {
 	$scope.orderByMe = function(x){
 		$scope.myOrderBy = x;
 	}
+});
+
+app.controller('localizacaoCTRL', function($scope, $location) {
+	$scope.myURL = $location.absUrl();
+});
+
+app.controller('timeOutCTRL', function($scope, $timeout) {
+	$scope.timerMSG = "Oi";
+	$timeout(function(){
+		$scope.timerMSG = "Oi depois de 3 segundos";
+	}, 3000 );
+});
+
+app.controller('intervalCTRL', function($scope, $interval) {
+	$scope.intervalo = new Date().toLocaleTimeString();
+	$interval(function(){
+		$scope.intervalo = new Date().toLocaleTimeString();
+	}, 1000 );
 });

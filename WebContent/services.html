@@ -7,23 +7,36 @@
 		<link rel="stylesheet" href="resources/css/bootstrap.min.css" />
 		<link rel="stylesheet" href="resources/css/bootstrap-grid.min.css" />
 		
+		
 		<script type="text/javascript" src="resources/js/plugins/angular.min.js"></script>
 		<script type="text/javascript" src="resources/js/plugins/angular-route.min.js"></script>
 		<script type="text/javascript" src="resources/js/plugins/ui-bootstrap-tpls-3.0.4.min.js"></script>
 		<script type="text/javascript" src="resources/js/controllers/mainController.js"></script>
 	</head>
-	
-	<body id="corpo">
-		<div class="container">
-			<center><h1 page-title-directive></h1></center>
-			<hr>
-			<a href="#/" class="btn btn-secondary btn-lg"> Frutas </a>
-			<a href="#/mail-validation" class="btn btn-secondary btn-lg"> Email Validation </a>
-			<a href="#/filters" class="btn btn-secondary btn-lg">Filters</a>
-			<a href="#/services" class="btn btn-secondary btn-lg">Services</a>
-			<div ng-view>
+	<body>
+		<br />
+		<pre>Services Example</pre>
+		<hr>
+		<div class="jumbotron">
+			<div ng-controller="localizacaoCTRL">
+				<p>A URL da página é</p>
+				<code>{{myURL}}</code>
 			</div>
-			<br>
 		</div>
+		
+		<div class="jumbotron">
+			<div ng-controller="timeOutCTRL">
+				<p>Timeout services: </p>
+				<code>{{timerMSG}}</code>
+			</div>
+		</div>
+		
+		<div class="jumbotron">
+			<div ng-controller="intervalCTRL">
+				<p>O Tempo e: </p>
+				<code>{{intervalo}}</code>
+			</div>
+		</div>
+		
 	</body>
 </html>
