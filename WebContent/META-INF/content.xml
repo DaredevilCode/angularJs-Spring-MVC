@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Context reloadable="true">
+	<Resource 
+		name="jdbc/datasource"
+		auth="container"
+		type="javax.sql.datasource"
+		defaultAutoCommit="false"
+		maxActive="50"
+		maxIdle="10"
+		initialSize="10"
+		driverClassName="org.postgresql.driver"
+		validationQuery="SELECT 'OK'"
+		testWhiteIdle="true"
+		testOnBorrow="true"
+		numTestsPerEvictionRun="5"
+		timeBetweenEvictionRunMillis="5000"
+		minEvictableIdleTimeMillis="60000"
+		antiJARLocking="false"
+		username="studiocoder"
+		password="78523"
+		url="jdbc:postgresql://localhost:5432/studiocoder?autoReconnect=true" />
+</Context>
