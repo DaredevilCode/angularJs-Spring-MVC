@@ -22,11 +22,10 @@
 	<context:component-scan base-package="br.com.curso.dao" />
 	<context:component-scan base-package="br.com.curso.controller" />
 
-
 	<!-- Data Source -->
 	<bean id="springDataSource" name="springDataSource" class="org.springframework.jndi.JndiObjectFactoryBean" lazy-init="false">
 		<property name="jndiName">
-			<value>java:comp/env/jdbc/datasource</value> 
+			<value>java:comp/env/jdbc/datasouce</value> 
 		</property>
 	</bean>
 	
@@ -48,48 +47,8 @@
      </bean>  
       
       <bean id="clienteController" name="clienteController"
-        class="br.com.curso.controller.ClienteController">
-      		<constructor-arg value="br.com.curso.model.Cliente"/>
+        	class="br.com.curso.controller.ClienteController">
+      		<constructor-arg value="br.com.curso.models.Cliente"/>
       </bean>
-
-
-	<bean id="estadosController" name="estadosController"
-		class="br.com.curso.controller.EstadosController">
-		<constructor-arg value="br.com.curso.model.Estados" />
-	</bean>
-
-	<bean id="cidadesController" name="cidadesController"
-		class="br.com.curso.controller.CidadesController">
-		<constructor-arg value="br.com.curso.model.Cidades" />
-	</bean>
-	
-	<bean id="fornecedorController" name="fornecedorController"
-		class="br.com.curso.controller.FornecedorController">
-		<constructor-arg value="br.com.curso.model.Fornecedor" />
-	</bean>
-	
-	<bean id="livroController" name="livroController"
-		class="br.com.curso.controller.LivroController">
-		<constructor-arg value="br.com.curso.model.Livro" />
-	</bean>
-	
-	<bean id="itemPedidoController" name="itemPedidoController"
-		class="br.com.curso.controller.ItemPedidoController">
-		<constructor-arg value="br.com.curso.model.ItemPedido" />
-	</bean>
-	
-	<bean id="pedidoController" name="pedidoController"
-		class="br.com.curso.controller.PedidoController">
-		<constructor-arg value="br.com.curso.model.Pedido" />
-	</bean>
-	
-	<bean id="fileDownloadController" name="fileDownloadController"
-		class="br.com.curso.controller.FileDownloadController">
-	</bean>
-	
-	<bean id="reportUtil" name="reportUtil"
-		class="br.com.curso.controller.ReportUtil">
-	</bean>
-      
 </beans>
 

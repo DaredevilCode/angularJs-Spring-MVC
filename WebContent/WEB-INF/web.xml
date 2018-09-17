@@ -51,7 +51,7 @@
   </filter-mapping>
 	
 	<listener>
-		<listener-class>br.com.curso.listener.ContextLoaderListenerCaixakiUtils</listener-class>
+		<listener-class>br.com.curso.listener.ContextLoaderListenerUtils</listener-class>
 	</listener>
 	
 	<!-- Trabalhando com Servlets -->
@@ -60,8 +60,8 @@
 	</listener>
 	
 	<resource-ref>
-		<description>DataSource datasource</description>
-		<res-ref-name>jdbc/datasource</res-ref-name>
+		<description>DataSource datasouce</description>
+		<res-ref-name>jdbc/datasouce</res-ref-name>
 		<res-type>javax.sql.DataSource</res-type>
 		<res-auth>Container</res-auth>
 	</resource-ref>

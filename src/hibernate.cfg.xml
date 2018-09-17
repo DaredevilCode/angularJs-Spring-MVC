@@ -6,7 +6,7 @@
 <hibernate-configuration>
 	<session-factory name="sessionFactory">
 		<property name="hibernate.dialect">org.hibernate.dialect.PostgreSQLDialect</property>
-		<property name="hibernate.connection.datasource">java:/comp/env/jdbc/datasource</property>
+		<property name="hibernate.connection.datasource">java:/comp/env/jdbc/datasouce</property>
 		<property name="hibernate.default_schema">public</property>
 		<property name="hibernate.current_session_context_class">thread</property> <!-- Contexto de sessão a ser usado -->
 		<property name="hibernate.transaction.factory_class">org.hibernate.transaction.JDBCTransactionFactory</property> <!-- Delegada as transações (JDBC) a bases de dados (Padrão) -->
@@ -15,7 +15,7 @@
 		<property name="hibernate.cache.use_second_level_cache">true</property> <!-- Cache -->
 		<property name="hibernate.transaction.auto_close_session">true</property> <!-- Fecha sessão automaticamente -->
 		<property name="hibernate.hbm2ddl.auto">update</property> 
-		<property name="hibernate.show_sql">true</property>
+		<property name="hibernate.show_sql">false</property>
 		<property name="hibernate.format_sql">true</property>
 		<property name="hibernate.generate_statistics">false</property> <!-- Estatisticas de processos SQL -->
 		<property name="hibernate.use_sql_comments">false</property>
@@ -23,14 +23,6 @@
 		<property name="hibernate.connection.pool_size">50</property> <!-- Poll de conexão -->
 
 
-	    <mapping class="com.curso.model.Estados" />
-	    <mapping class="com.curso.model.Cidades" />
-		<mapping class="com.curso.model.Cliente" />
-		<mapping class="com.curso.model.Fornecedor" />
-		<mapping class="com.curso.model.Livro" />
-		<mapping class="com.curso.model.Pedido" />
-		<mapping class="com.curso.model.ItemPedido" />
-		
-		
+	    <mapping class="br.com.curso.models.Cliente" />
 	</session-factory>
 </hibernate-configuration>
