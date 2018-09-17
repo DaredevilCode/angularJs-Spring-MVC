@@ -5,17 +5,14 @@ import java.util.List;
 import org.springframework.stereotype.Service;
 
 @Service
-public interface DaoService<T>{
-	
+public interface DaoService<T> {
 	void create(T object) throws Exception;
 	
 	void destroy(T object) throws Exception;
 	
 	void update(T object) throws Exception;
 	
-	void findById(Integer id) throws Exception;
-	
-	void salvarOuAtualizar(T object) throws Exception;
+	void saveOrUpdate(T Object) throws Exception;
 	
 	T merge(T object) throws Exception;
 	

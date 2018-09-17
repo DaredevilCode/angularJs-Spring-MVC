@@ -3,9 +3,10 @@ package br.com.curso.dao;
 import java.util.List;
 
 import org.hibernate.SessionFactory;
-
 import br.com.curso.hibernate.HibernateUtil;
+import org.springframework.stereotype.Service;
 
+@Service
 public abstract class DAOImplementacao<T> implements DaoService<T> {
 
 	private Class<T> persitenceClass;
@@ -33,7 +34,7 @@ public abstract class DAOImplementacao<T> implements DaoService<T> {
 	}
 
 	@Override
-	public void salvarOuAtualizar(T object) throws Exception {
+	public void saveOrUpdate(T object) throws Exception {
 		sessionFactory.getCurrentSession().saveOrUpdate(object);
 	}
 
@@ -48,8 +49,5 @@ public abstract class DAOImplementacao<T> implements DaoService<T> {
 	public List<T> list() throws Exception {
 		return sessionFactory.getCurrentSession().createCriteria(persitenceClass).list();
 	}
-	
-	
-	
 	
 }
