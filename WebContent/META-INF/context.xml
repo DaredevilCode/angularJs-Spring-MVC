@@ -1,26 +1,26 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Context reloadable="true">
 	<Resource	
-				name="jdbc/datasouce" 
-				auth="Container" 
-				type="javax.sql.DataSource"
-				defaultAutoCommit='false'
-				maxActive="50"
-				maxIdle="10" 
-				maxWait="10"
-				initialSize="10"
-				driverClassName="org.postgresql.Driver"
-				validationQuery="SELECT 'OK'"
-				testWhileIdle="true"
-           		testOnBorrow="true"
-           		numTestsPerEvictionRun="5"
-                timeBetweenEvictionRunsMillis="5000"
-                minEvictableIdleTimeMillis="60000"
-				antiJARLocking="false"
-                antiResourceLocking="false"
-				username="studiocoder"
-				password="78523"
-				url="jdbc:postgresql://localhost:5432/angularjs_spring_restful?autoReconnect=true"/>
+		name="jdbc/datasouce" 
+		auth="Container" 
+		type="javax.sql.DataSource"
+		defaultAutoCommit='false'
+		maxActive="50"
+		maxIdle="10" 
+		maxWait="10"
+		initialSize="10"
+		driverClassName="org.postgresql.Driver"
+		validationQuery="SELECT 'OK'"
+		testWhileIdle="true"
+   		testOnBorrow="true"
+   		numTestsPerEvictionRun="5"
+        timeBetweenEvictionRunsMillis="5000"
+        minEvictableIdleTimeMillis="60000"
+		antiJARLocking="false"
+        antiResourceLocking="false"
+		username="studiocoder"
+		password="78523"
+		url="jdbc:postgresql://localhost:5432/angularjs_spring_restful?autoReconnect=true"/>
 				
 	<!-- http://tomee.apache.org/datasource-config.html -->	
 	<!-- maxActive máximo transações ativas -->
