@@ -18,7 +18,7 @@
 
 	<filter>
 		<filter-name>conexaoFilter</filter-name>
-		<filter-class>br.com.curso.filter.FilterOpenSessionInView</filter-class>
+		<filter-class>br.br.com.curso.filter.FilterOpenSessionInView</filter-class>
 	</filter>
 
 	<filter>
@@ -51,7 +51,7 @@
   </filter-mapping>
 	
 	<listener>
-		<listener-class>br.com.curso.listener.ContextLoaderListenerCaixakiUtils</listener-class>
+		<listener-class>br.br.com.curso.listener.ContextLoaderListenerCaixakiUtils</listener-class>
 	</listener>
 	
 	<!-- Trabalhando com Servlets -->
